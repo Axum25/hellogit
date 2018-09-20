@@ -19,32 +19,33 @@ int main()
 	*/
 	
 	vector <Data> V;
-	v.push_back({7,21.01});
+  V.push_back({7,21.01});
 	
 	Data d;
 	
-	v.push_back(d);
+	V.push_back(d);
 	
 	
 	d.setX(10);
 	d.setY(12.10);
 	V.push_back(d);
 	
-	for (int i = 0; i < v.size(); i++)
+	for (int i = 0; i < V.size(); i++)
 	{
-		cout << V[i].getX()<<",";
-		cout << V[i].getY()<<endl;
-	}
+		cout << V[i].getX() << ",";
+		cout << V[i].getY() << endl;
+
 		/**
 		* Alternative for loop method
 		* 
 		* 	for (auto a: V)
 		* 		{
-		* 			cout << a.getX()<<",";
-		* 			cout << a.getY()<<endl;
+		* 			cout << a.getX() << ",";
+		* 			cout << a.getY() << endl;
 		* 		}
 		* 
 		* 'a' is just a variable name
 		*/
+  }
 	return 0;
 }

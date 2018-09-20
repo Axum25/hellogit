@@ -11,14 +11,14 @@ Data::Data()
 }
 Data::Data(int a, float b)
 {
-	x(a);
-	y(b);
+	x = a;
+	y = b;
 }
 int Data::getX()
 {
 	return x;
 }
-void Data::setX()
+void Data::setX(int a)
 {
 	x = a;
 }
