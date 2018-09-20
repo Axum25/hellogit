@@ -3,22 +3,11 @@
 #include "Data.h"
 
 using namespace std;
+void selectionSort(auto& x);
 
 int main()
-{
-	/**
-	vector <int> v1;
-	vector <int> v2 = {5,8,22};
-	vector <int> v3(1000,0);
-	
-	v1.push_back(12);
-	v2.push_back(17);
-	v2.push_back();
-	
-	cout << "V2 has "<<v2.size()<<"elements";
-	*/
-	
-	vector <Data> V;
+{ 
+  vector <Data> V;
   V.push_back({7,21.01});
 	
 	Data d;
@@ -30,6 +19,8 @@ int main()
 	d.setY(12.10);
 	V.push_back(d);
 	
+  selectionSort(V);
+
 	for (int i = 0; i < V.size(); i++)
 	{
 		cout << V[i].getX() << ",";
@@ -48,4 +39,23 @@ int main()
 		*/
   }
 	return 0;
+}
+
+void selectionSort(auto& x)
+{
+  for (int i = 0; i < x.size(); i++)
+  {
+    int min_index = i;
+
+    for (int j = i+1; j < x.size(); j++)
+    {
+	//IMPORTANT - 'x' (the x value is the sort key)-
+      if (x[min_index].getX() > x[j].getX())
+    //IMPORTANT
+      {
+        min_index = j;
+      }
+    }
+    swap(x[i], x[min_index]);
+  }
 }
