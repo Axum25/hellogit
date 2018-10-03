@@ -49,7 +49,7 @@ void selectionSort(auto& x)
 
     for (int j = i+1; j < x.size(); j++)
     {
-	//IMPORTANT - 'x' (the x value is the sort key)-
+	//IMPORTANT - 'x' (the x value is the sort key, x value as in the value at getX())-
       if (x[min_index].getX() > x[j].getX())
     //IMPORTANT
       {
